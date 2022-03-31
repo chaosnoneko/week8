@@ -1,0 +1,130 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  a {
+    color: $primary-color;
+  }
+}
+header {
+  font-family: $primary-font;
+  height: $huge;
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  h1 {
+    position: absolute;
+    top: 10%;
+    font-weight: bold;
+    font-size: $small;
+  }
+}
+.cards {
+  background-color: $border-color;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: $tiny;
+  background-color: white;
+  width: 100%;
+  .img {
+    background-size: cover;
+    height: $large;
+    width: 100%;
+    background-position: center;
+  }
+}
+main {
+  flex-direction: column;
+  margin: $tiny;
+  aside {
+    border: $border-size solid $border-color;
+    padding: $tiny;
+  }
+  article {
+    padding: $tiny;
+  }
+}
+footer {
+  background-color: $primary-color;
+  flex-direction: row;
+  ul {
+    justify-content: space-around;
+    list-style: none;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: $tablet) {
+  .cards {
+    flex-direction: row nowrap;
+    align-items: center;
+    justify-content: center;
+    &-text {
+      padding: 0 $tiny $tiny $tiny;
+    }
+    .card {
+      width: 80%;
+      flex-direction: row nowrap;
+      max-height: 250px;
+    }
+    img {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: $tiny;
+    }
+    &-title,
+    &-text {
+      border: 2px solid red;
+      position: relative;
+      bottom: 200px;
+      left: 200px;
+    }
+    &-text {
+      height: 100px;
+    }
+  }
+  nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  main {
+    flex-flow: row;
+    aside {
+      width: 25%;
+    }
+    article {
+      width: 50%;
+    }
+  }
+  footer > ul {
+    justify-content: center;
+  }
+  a {
+    padding: $tiny;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  .card {
+    flex-basis: 1;
+    margin: $tiny;
+    .img {
+      width: 44%;
+    }
+  }
+}
