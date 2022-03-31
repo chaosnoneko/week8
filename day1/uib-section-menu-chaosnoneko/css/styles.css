@@ -1,0 +1,70 @@
+/* Show navigation bar as a fixed column on the left */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 14rem;
+  height: 100vh;
+  border-right: 3px solid black;
+  overflow: auto;
+  font-size: 1rem;
+
+  /* Set background and border details? */
+  background-color: rgba(206, 187, 152, 0.8);
+}
+
+nav div.alias {
+  /* Distinguish links to aliases and
+   * functions from general explanations
+   */
+   padding: 10px;
+   background-color: rgb(216, 172, 119);
+}
+
+nav code {
+  /* Show <code> tags in a distinct way? */
+  font-size: 20px;
+}
+
+nav a {
+  /* Use `display:` to show links as a column
+   * rather than all in one continuous line
+   */
+   display: block;
+   margin: 0.5rem;
+   padding: 0.5rem;
+   border: 3px rgb(199, 162, 125) outset;
+   background-color: bisque;
+   border-radius: 0.5rem;
+   text-decoration: none;
+   user-select: none;
+   -webkit-user-drag: none;
+   color: black;
+   
+}
+
+nav a:hover {
+  /* Provide visual feedback for mouse over */
+  background-color: white;
+}
+
+nav a:active {
+  /* Provide visual feedback when link is
+   * pressed
+   */
+   background-color: rgb(199, 168, 129);
+}
+
+nav a:visited {
+  /* Provide visual feedback for a visited
+   * section
+   */
+   background-color: rgb(87, 72, 51);
+}
+
+main {
+  /* Provide padding to the left so that the
+   * main text is not hidden behind the menu
+   */
+   padding-left: 15rem;
+}
